@@ -42,7 +42,7 @@ El proyecto lee las credenciales desde un archivo externo por seguridad.
 4.  Utilice el menú de consola para probar las operaciones.
 
 ### 📹 Video de Presentación
-[PEGAR AQUÍ EL ENLACE A YOUTUBE O DRIVE]
+(https://youtu.be/8WCfGglJohk?si=HZSbEWpH32uJt0KD)
 
 ### 👥 Integrantes
 * **Martin Rotolo**: Diseño, BD y Entidades.
