@@ -13,7 +13,7 @@ El dominio elegido es **Vehículo → SeguroVehicular**.
 * **Java JDK:** 21 (o superior).
 * **Base de Datos:** MySQL 8.0.
 * **IDE recomendado:** NetBeans / IntelliJ / Eclipse.
-* **Driver:** MySQL Connector/J (debe estar en la carpeta `lib/` o agregado al proyecto).
+* **Driver:** MySQL Connector/J (incluido en la carpeta `lib/` del proyecto)).
 
 ### 🚀 Instrucciones de Instalación y Ejecución
 
@@ -25,28 +25,32 @@ Siga estos pasos para levantar el proyecto desde cero:
 3.  Ejecute el script **`02_data_tfi_Seguros.sql`** para cargar datos de prueba iniciales.
 
 #### 2. Configuración de Conexión
-El proyecto lee las credenciales desde un archivo externo por seguridad.
-1.  Vaya a la carpeta raíz del proyecto.
-2.  Cree un archivo llamado **`db.properties`** (si no existe).
-3.  Agregue el siguiente contenido reemplazando con sus credenciales:
+El proyecto incluye un archivo de configuración llamado **`db.properties`** en la raíz.
+1.  Abra el archivo **`db.properties`** con un editor de texto o desde el IDE.
+2.  Verifique o modifique las credenciales según su instalación local de MySQL:
+
     ```properties
     db.url=jdbc:mysql://localhost:3306/tfi_seguros_db?useSSL=false&serverTimezone=UTC
-    db.user=SU_USUARIO_MYSQL
-    db.password=SU_CONTRASEÑA_MYSQL
+    db.user=root
+    # Si usa XAMPP, deje la contraseña vacía (sin espacios):
+    db.password=
+    # Si usa Workbench con contraseña, escríbala a continuación:
+    # db.password=SuContraseñaAqui
     ```
 
 #### 3. Ejecución
 1.  Abra el proyecto en NetBeans.
-2.  Si tiene errores de librerías, asegúrese de agregar el `.jar` del driver MySQL (ubicado en `lib/`) a las "Libraries" del proyecto.
+2.  El proyecto ya incluye el driver necesario en la carpeta **`lib/`**.
+    * *Nota:* Si al abrirlo el IDE indica "Reference Problems" (librería no encontrada), vaya a **Properties > Libraries** y vuelva a seleccionar el archivo `.jar` que se encuentra dentro de la carpeta `lib/` del proyecto.
 3.  Ejecute la clase principal: `main.MainApp`.
-4.  Utilice el menú de consola para probar las operaciones.
+4.  Utilice el menú de consola para probar las operaciones CRUD.
 
 ### 📹 Video de Presentación
-[PEGAR AQUÍ EL ENLACE A YOUTUBE O DRIVE]
+https://youtu.be/8WCfGglJohk?si=HZSbEWpH32uJt0KD
 
 ### 👥 Integrantes
 * **Martin Rotolo**: Diseño, BD y Entidades.
-* **Wolanink Melany**: DAO, Servicios y Transacciones, Menú y Testing.
+* **Wolanink Melany**: Implementación de Servicios, Transacciones y Lógica de Negocio.
 
 ---
 *Trabajo realizado para la Tecnicatura Universitaria en Programación - UTN.*

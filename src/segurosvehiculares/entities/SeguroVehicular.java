@@ -15,7 +15,7 @@ public class SeguroVehicular {
     private String nroPoliza;      
     private CoberturaEnum cobertura;  
     private LocalDate vencimiento;   
-    
+    private Long vehiculoId;
 
     // Constructor vacío
     public SeguroVehicular() {
@@ -29,6 +29,7 @@ public class SeguroVehicular {
         this.nroPoliza = nroPoliza;
         this.cobertura = cobertura;
         this.vencimiento = vencimiento;
+        
     }
 
     // Getters y setters 
@@ -79,6 +80,12 @@ public class SeguroVehicular {
     public void setVencimiento(LocalDate vencimiento) {
         this.vencimiento = vencimiento;
     }
+    
+    public Long getVehiculoId() { 
+        return vehiculoId; }
+    
+    public void setVehiculoId(Long vehiculoId) { 
+        this.vehiculoId = vehiculoId; }
 
     @Override
     public String toString() {
